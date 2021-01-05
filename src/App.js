@@ -21,23 +21,32 @@ function App() {
   };
 
   const getRandomTimeoutValue = () =>
-    (Math.floor(Math.random() * 6) + 1) * 1000;
+    (Math.floor(Math.random() * 10) + 1) * 1000;
 
   return (
     <div className="App">
-      <div>
-        <Button onClick={() => setNormalDiv(!normalDiv)}>Show Div</Button>
-        {normalDiv && <div>Div here</div>}
+      <div id="parentDiv1">
+        <Button id="normalDivButton" onClick={() => setNormalDiv(!normalDiv)}>
+          Show Div
+        </Button>
+        {normalDiv && <div id="normalDiv">Div here</div>}
       </div>
-      <div>
-        <Button disabled={loading} onClick={toggleDelayedDiv}>
+      <div id="parentDiv2">
+        <Button
+          id="delayedDivButton"
+          disabled={loading}
+          onClick={toggleDelayedDiv}
+        >
           Delayed Div
         </Button>
-        {delayedDiv && <div>Delayed div here</div>}
+        {delayedDiv && <div id="delayedDiv">Delayed div here</div>}
       </div>
-      <div>
-        <Button onClick={() => setModal(!modal)}>Modal</Button>
+      <div id="parentDiv3">
+        <Button id="modalDivButton" onClick={() => setModal(!modal)}>
+          Modal
+        </Button>
         <CustomModal
+          id="modalDiv"
           show={modal}
           headerTitle=" "
           showTriggerButton={false}
