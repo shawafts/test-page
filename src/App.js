@@ -26,8 +26,7 @@ function App() {
   return (
     <div className="App">
       <div id="parentDiv1">
-        {/* <Button id="normalDivButton" onClick={() => setNormalDiv(!normalDiv)}> */}
-        <Button id="normalDivButton" onClick={() => {}}>
+        <Button id="normalDivButton" onClick={() => setNormalDiv(!normalDiv)}>
           Show Div
         </Button>
         {normalDiv && <div id="normalDiv">Div here</div>}
@@ -36,7 +35,8 @@ function App() {
         <Button
           id="delayedDivButton"
           disabled={loading}
-          onClick={toggleDelayedDiv}
+          // onClick={toggleDelayedDiv}
+          onClick={() => {}}
         >
           Delayed Div
         </Button>
