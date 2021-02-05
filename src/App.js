@@ -35,15 +35,16 @@ function App() {
         <Button
           id="delayedDivButton"
           disabled={loading}
-          // onClick={toggleDelayedDiv}
-          onClick={() => {}}
+          onClick={toggleDelayedDiv}
+          // onClick={() => {}}
         >
           Delayed Div
         </Button>
         {delayedDiv && <div id="delayedDiv">Delayed div here</div>}
       </div>
       <div id="parentDiv3">
-        <Button id="modalDivButton" onClick={() => setModal(!modal)}>
+        {/* <Button id="modalDivButton" onClick={() => setModal(!modal)}> */}
+        <Button id="modalDivButton" onClick={() => {}}>
           Modal
         </Button>
         <CustomModal
