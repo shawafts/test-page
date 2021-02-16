@@ -19,14 +19,12 @@ function App() {
     setFormData(data);
   };
   const onSubmit = () => {
-    console.log("Submit");
     const data = formData;
     setSubmittedData(data);
     setIsSubmitted(true);
   };
 
   const onClear = () => {
-    console.log("Clear");
     setIsSubmitted(false);
     setSubmittedData({});
     setFormData(initialFormData);
@@ -91,7 +89,7 @@ function App() {
               <input
                 id="checkbox"
                 type="checkbox"
-                value={formData.checkboxData.toString()}
+                checked={formData.checkboxData}
                 onChange={(e) => {
                   updateFormField(!formData.checkboxData, "checkboxData");
                 }}
