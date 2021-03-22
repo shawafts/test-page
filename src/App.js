@@ -11,6 +11,7 @@ function App() {
 
   const toggleDelayedDiv = () => {
     if (delayedDiv) setDelayedDiv(false);
+    //Test
     else {
       setLoading(true);
       setTimeout(() => {
